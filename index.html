@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoostFlow - Simplify Your Workflow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Dark mode class config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+
+  <!-- Theme Initialization -->
+  <script>
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- Link external theme toggle script -->
+  <script defer src="theme.js"></script>
+</head>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans">
+
+  <!-- Theme Toggle -->
+  <div class="absolute top-4 right-4">
+    <button id="themeToggle" class="text-xl bg-white dark:bg-gray-800 text-gray-800 dark:text-white border p-2 rounded-full shadow hover:scale-105 transition">
+      🌙
+    </button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-blue-50 dark:bg-gray-800 py-16 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">BoostFlow</h1>
+      <p class="text-lg md:text-xl mb-6">Powerful workflow automation for modern teams.</p>
+      <a href="#pricing" class="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700">Get Started Free</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 px-6 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12">Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 border rounded-lg shadow hover:shadow-lg transition bg-white dark:bg-gray-700">
+          <div class="text-blue-600 text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-semibold mb-2">Automation</h3>
+          <p>Automate repetitive tasks and boost your team's efficiency.</p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-lg transition bg-white dark:bg-gray-700">
+          <div class="text-blue-600 text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-semibold mb-2">Analytics</h3>
+          <p>Get deep insights into your workflows and performance.</p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-lg transition bg-white dark:bg-gray-700">
+          <div class="text-blue-600 text-4xl mb-4">🔒</div>
+          <h3 class="text-xl font-semibold mb-2">Security</h3>
+          <p>Enterprise-grade security to keep your data safe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="bg-gray-50 dark:bg-gray-800 py-16 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12">What Our Users Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow">
+          <p>"BoostFlow has revolutionized how we manage tasks. It saves hours every week!"</p>
+          <div class="mt-4 font-semibold">– Sohaib R., Product Manager</div>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow">
+          <p>"The automation features are amazing. Simple, fast, and very reliable."</p>
+          <div class="mt-4 font-semibold">– Nain k., Startup Founder</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-16 px-6 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12">Pricing</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Free Plan -->
+        <div class="border p-6 rounded-lg shadow hover:shadow-xl transition bg-white dark:bg-gray-800">
+          <h3 class="text-xl font-semibold mb-2">Free</h3>
+          <p class="text-4xl font-bold mb-4">$0</p>
+          <ul class="mb-4 space-y-2">
+            <li>✓ 5 Workflows</li>
+            <li>✓ Basic Support</li>
+            <li>✓ Community Access</li>
+          </ul>
+          <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Sign Up</button>
+        </div>
+        <!-- Pro Plan -->
+        <div class="border p-6 rounded-lg shadow-lg transform scale-105 bg-blue-50 dark:bg-gray-700">
+          <h3 class="text-xl font-semibold mb-2">Pro</h3>
+          <p class="text-4xl font-bold mb-4">$29/mo</p>
+          <ul class="mb-4 space-y-2">
+            <li>✓ Unlimited Workflows</li>
+            <li>✓ Priority Support</li>
+            <li>✓ Team Collaboration</li>
+          </ul>
+          <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Get Pro</button>
+        </div>
+        <!-- Enterprise Plan -->
+        <div class="border p-6 rounded-lg shadow hover:shadow-xl transition bg-white dark:bg-gray-800">
+          <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
+          <p class="text-4xl font-bold mb-4">Custom</p>
+          <ul class="mb-4 space-y-2">
+            <li>✓ Everything in Pro</li>
+            <li>✓ Dedicated Manager</li>
+            <li>✓ Custom Integrations</li>
+          </ul>
+          <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="bg-blue-600 dark:bg-blue-700 text-white py-16 px-6 text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Ready to simplify your workflow?</h2>
+      <p class="mb-6">Join thousands of teams using BoostFlow today.</p>
+      <a href="#" class="bg-white text-blue-600 font-semibold py-3 px-6 rounded hover:bg-gray-100">Start Free Trial</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>© 2025 Muhammad Hasnain. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
